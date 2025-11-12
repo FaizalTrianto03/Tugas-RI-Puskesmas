@@ -89,11 +89,18 @@ web/.flutter-plugins-dependencies
 # ───────────────────────────────
 # Firebase / Secrets
 # ───────────────────────────────
-google-services.json
-GoogleService-Info.plist
 .env
-*.keystore
-*.jks
+firebase.json
+firebase-debug.log
+.firebase/
+.firebase/
+**/firebase.json
+**/firebase-debug.log
+**/.firebase/
+**/GoogleService-Info.plist
+**/google-services.json
+**/firebase_app_id_file.json
+**/firebase_options.dart
 
 # ───────────────────────────────
 # Build Symbols / Obfuscation

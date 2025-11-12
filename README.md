@@ -22,8 +22,8 @@ Project ini berfokus pada penerapan antarmuka yang intuitif, kemudahan interaksi
 
 | Nama Lengkap | NIM |
 |---------------|--------------------|
-| Faizal Qadri Trianto | 202210370311015 |
 | Anisa Ayu Nabila Nur Rahmah | 202210370311009 |
+| Faizal Qadri Trianto | 202210370311015 |
 | Dias Aditama | 202210370311021 |
 | Mukarram Luthfi Al Manfaluti | 202210370311023 |
 

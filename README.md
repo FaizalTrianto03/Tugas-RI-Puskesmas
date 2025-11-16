@@ -1,16 +1,39 @@
-# puskesmas_app_tugas_ri
+# 🏥 Tugas Rekayasa Interaksi — Aplikasi Puskesmas
 
-A new Flutter project.
+Project ini merupakan tugas mata kuliah **Rekayasa Interaksi** dengan tema **Aplikasi Puskesmas**.  
+Aplikasi dikembangkan menggunakan **Flutter** dan **Firebase** sebagai bagian dari implementasi konsep interaksi pengguna dalam pengembangan aplikasi mobile.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 💡 Deskripsi Project
 
-A few resources to get you started if this is your first Flutter project:
+Aplikasi Puskesmas ini dirancang untuk mempermudah akses layanan kesehatan bagi masyarakat.  
+Fitur-fitur utamanya meliputi:
+- Pendaftaran pasien secara daring.  
+- Informasi jadwal dokter dan layanan kesehatan.  
+- Riwayat kunjungan pasien.  
+- Integrasi dengan Firebase untuk autentikasi dan manajemen data.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Project ini berfokus pada penerapan antarmuka yang intuitif, kemudahan interaksi, serta pengalaman pengguna yang efisien dan ramah.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 👥 Anggota Kelompok
+
+| Nama Lengkap | NIM |
+|---------------|--------------------|
+| Anisa Ayu Nabila Nur Rahmah | 202210370311009 |
+| Faizal Qadri Trianto | 202210370311015 |
+| Dias Aditama | 202210370311021 |
+| Mukarram Luthfi Al Manfaluti | 202210370311023 |
+
+---
+
+## ⚙️ Teknologi yang Digunakan
+- Flutter (Dart)
+- Firebase Authentication & Firestore
+- Android Studio / VS Code
+
+---
+
+📌 *Project ini dikembangkan untuk memenuhi tugas mata kuliah Rekayasa Interaksi dan sebagai studi penerapan teknologi Flutter dalam pengembangan aplikasi layanan kesehatan.*

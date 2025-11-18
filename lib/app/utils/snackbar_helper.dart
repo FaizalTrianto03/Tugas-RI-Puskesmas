@@ -1,91 +1,92 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'colors.dart';
-
-/// Helper class untuk menampilkan snackbar dengan styling konsisten
 class SnackbarHelper {
-  SnackbarHelper._();
-
-  /// Snackbar sukses (hijau)
-  static void showSuccess(String message, {String title = 'Berhasil'}) {
+  static void showError(String message) {
     Get.snackbar(
-      title,
+      'Error',
       message,
       snackPosition: SnackPosition.TOP,
-      backgroundColor: AppColors.success,
-      colorText: AppColors.white,
-      icon: const Icon(Icons.check_circle, color: AppColors.white),
-      duration: const Duration(seconds: 3),
+      backgroundColor: const Color(0xFFFF4242),
+      colorText: Colors.white,
       margin: const EdgeInsets.all(16),
-      borderRadius: 8,
+      borderRadius: 12,
+      duration: const Duration(seconds: 3),
+      icon: const Icon(Icons.error_outline, color: Colors.white, size: 28),
+      shouldIconPulse: false,
+      boxShadows: [
+        BoxShadow(
+          color: Colors.black.withValues(alpha: 0.2),
+          blurRadius: 10,
+          offset: const Offset(0, 4),
+        ),
+      ],
     );
   }
 
-  /// Snackbar error (merah)
-  static void showError(String message, {String title = 'Error'}) {
+  static void showSuccess(String message) {
     Get.snackbar(
-      title,
+      'Berhasil',
       message,
       snackPosition: SnackPosition.TOP,
-      backgroundColor: AppColors.error,
-      colorText: AppColors.white,
-      icon: const Icon(Icons.error, color: AppColors.white),
-      duration: const Duration(seconds: 3),
+      backgroundColor: const Color(0xFF4CAF50),
+      colorText: Colors.white,
       margin: const EdgeInsets.all(16),
-      borderRadius: 8,
+      borderRadius: 12,
+      duration: const Duration(seconds: 3),
+      icon: const Icon(Icons.check_circle_outline, color: Colors.white, size: 28),
+      shouldIconPulse: false,
+      boxShadows: [
+        BoxShadow(
+          color: Colors.black.withValues(alpha: 0.2),
+          blurRadius: 10,
+          offset: const Offset(0, 4),
+        ),
+      ],
     );
   }
 
-  /// Snackbar warning (kuning)
-  static void showWarning(String message, {String title = 'Peringatan'}) {
+  static void showWarning(String message) {
     Get.snackbar(
-      title,
+      'Peringatan',
       message,
       snackPosition: SnackPosition.TOP,
-      backgroundColor: AppColors.warning,
-      colorText: AppColors.white,
-      icon: const Icon(Icons.warning, color: AppColors.white),
-      duration: const Duration(seconds: 3),
+      backgroundColor: const Color(0xFFFFC107),
+      colorText: Colors.white,
       margin: const EdgeInsets.all(16),
-      borderRadius: 8,
+      borderRadius: 12,
+      duration: const Duration(seconds: 3),
+      icon: const Icon(Icons.warning_amber_outlined, color: Colors.white, size: 28),
+      shouldIconPulse: false,
+      boxShadows: [
+        BoxShadow(
+          color: Colors.black.withValues(alpha: 0.2),
+          blurRadius: 10,
+          offset: const Offset(0, 4),
+        ),
+      ],
     );
   }
 
-  /// Snackbar info (biru)
-  static void showInfo(String message, {String title = 'Informasi'}) {
+  static void showInfo(String message) {
     Get.snackbar(
-      title,
+      'Informasi',
       message,
       snackPosition: SnackPosition.TOP,
-      backgroundColor: AppColors.info,
-      colorText: AppColors.white,
-      icon: const Icon(Icons.info, color: AppColors.white),
+      backgroundColor: const Color(0xFF2196F3),
+      colorText: Colors.white,
+      margin: const EdgeInsets.all(16),
+      borderRadius: 12,
       duration: const Duration(seconds: 3),
-      margin: const EdgeInsets.all(16),
-      borderRadius: 8,
-    );
-  }
-
-  /// Snackbar custom
-  static void show({
-    required String title,
-    required String message,
-    Color? backgroundColor,
-    Color? textColor,
-    IconData? icon,
-    Duration? duration,
-  }) {
-    Get.snackbar(
-      title,
-      message,
-      snackPosition: SnackPosition.TOP,
-      backgroundColor: backgroundColor ?? AppColors.primary,
-      colorText: textColor ?? AppColors.white,
-      icon: icon != null ? Icon(icon, color: textColor ?? AppColors.white) : null,
-      duration: duration ?? const Duration(seconds: 3),
-      margin: const EdgeInsets.all(16),
-      borderRadius: 8,
+      icon: const Icon(Icons.info_outline, color: Colors.white, size: 28),
+      shouldIconPulse: false,
+      boxShadows: [
+        BoxShadow(
+          color: Colors.black.withValues(alpha: 0.2),
+          blurRadius: 10,
+          offset: const Offset(0, 4),
+        ),
+      ],
     );
   }
 }

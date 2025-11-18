@@ -1,46 +1,28 @@
 import 'package:flutter/material.dart';
 
-/// Application color palette
-/// 
-/// Contains all colors used throughout the application
-/// based on the Puskesmas theme (medical/healthcare colors)
 class AppColors {
-  AppColors._();
-
-  // ─── Primary Colors ───
-  static const Color primary = Color(0xFF00A86B); // Medical green
-  static const Color primaryDark = Color(0xFF008556);
-  static const Color primaryLight = Color(0xFF33BA87);
-
-  // ─── Secondary Colors ───
-  static const Color secondary = Color(0xFF0891B2); // Cyan
-  static const Color secondaryDark = Color(0xFF0E7490);
-  static const Color secondaryLight = Color(0xFF06B6D4);
-
-  // ─── Neutral Colors ───
+  static const Color gradientTop = Color(0xFF84F3EE);
+  static const Color gradientBottom = Color(0xFF02B1BA);
+  
+  static const Color primary = Color(0xFF02B1BA);
+  static const Color accent = Color(0xFFFF4242);
   static const Color white = Color(0xFFFFFFFF);
-  static const Color black = Color(0xFF000000);
-  static const Color grey = Color(0xFF9CA3AF);
-  static const Color greyLight = Color(0xFFF3F4F6);
-  static const Color greyDark = Color(0xFF6B7280);
-
-  // ─── Status Colors ───
-  static const Color success = Color(0xFF10B981);
-  static const Color warning = Color(0xFFF59E0B);
-  static const Color error = Color(0xFFEF4444);
-  static const Color info = Color(0xFF3B82F6);
-
-  // ─── Text Colors ───
-  static const Color textPrimary = Color(0xFF1F2937);
-  static const Color textSecondary = Color(0xFF6B7280);
-  static const Color textHint = Color(0xFF9CA3AF);
-
-  // ─── Background Colors ───
-  static const Color background = Color(0xFFFAFAFA);
-  static const Color surface = Color(0xFFFFFFFF);
-  static const Color surfaceVariant = Color(0xFFF3F4F6);
-
-  // ─── Border Colors ───
-  static const Color border = Color(0xFFE5E7EB);
-  static const Color borderLight = Color(0xFFF3F4F6);
+  
+  static const Color textPrimary = Color(0xFF333333);
+  static const Color textSecondary = Color(0xFF666666);
+  static const Color textLight = Color(0xFFFFFFFF);
+  
+  static const Color backgroundLight = Color(0xFFF5F5F5);
+  static const Color backgroundDark = Color(0xFF1A1A1A);
+  
+  static const Color fieldBorder = Color(0xFFFFFFFF);
+  static const Color fieldBackground = Color(0x33FFFFFF);
+  
+  static const Color buttonPrimary = Color(0xFFFFFFFF);
+  static const Color buttonSecondary = Color(0x00FFFFFF);
+  
+  static const Color success = Color(0xFF4CAF50);
+  static const Color error = Color(0xFFFF4242);
+  static const Color warning = Color(0xFFFFC107);
+  static const Color info = Color(0xFF2196F3);
 }

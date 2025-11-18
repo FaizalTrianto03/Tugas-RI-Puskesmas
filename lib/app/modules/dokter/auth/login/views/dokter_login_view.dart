@@ -1,0 +1,179 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import '../controllers/dokter_login_controller.dart';
+import '../../../../../utils/colors.dart';
+import '../../../../../utils/text_styles.dart';
+import '../../../../../widgets/custom_text_field.dart';
+import '../../../../../widgets/custom_button.dart';
+
+class DokterLoginView extends GetView<DokterLoginController> {
+  const DokterLoginView({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              AppColors.primary,
+              Color(0xFF019CA4),
+            ],
+          ),
+        ),
+        child: SafeArea(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 40.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                const SizedBox(height: 20),
+                Center(
+                  child: Container(
+                    padding: const EdgeInsets.all(24),
+                    decoration: BoxDecoration(
+                      color: AppColors.white.withValues(alpha: 0.2),
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Icon(
+                      Icons.medical_services,
+                      size: 80,
+                      color: AppColors.white,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 24),
+                Text(
+                  'Masuk sebagai Dokter untuk akses layanan Puskesmas',
+                  style: AppTextStyles.h3.copyWith(
+                    color: AppColors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 48),
+                RichText(
+                  text: TextSpan(
+                    style: AppTextStyles.bodyMedium.copyWith(
+                      color: AppColors.white,
+                      fontWeight: FontWeight.w600,
+                    ),
+                    children: const [
+                      TextSpan(text: 'Data Diri (Email/Username)'),
+                      TextSpan(
+                        text: ' *',
+                        style: TextStyle(color: AppColors.accent),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 8),
+                CustomTextField(
+                  controller: controller.dataDiriController,
+                  hintText: 'Masukkan email atau username',
+                  keyboardType: TextInputType.text,
+                  prefixIcon: const Icon(
+                    Icons.person_outline,
+                    color: Colors.grey,
+                  ),
+                  backgroundColor: AppColors.white,
+                  textColor: Colors.black87,
+                  hintColor: Colors.grey,
+                  borderColor: AppColors.white,
+                  borderWidth: 0,
+                ),
+                const SizedBox(height: 16),
+                RichText(
+                  text: TextSpan(
+                    style: AppTextStyles.bodyMedium.copyWith(
+                      color: AppColors.white,
+                      fontWeight: FontWeight.w600,
+                    ),
+                    children: const [
+                      TextSpan(text: 'Kata Sandi'),
+                      TextSpan(
+                        text: ' *',
+                        style: TextStyle(color: AppColors.accent),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Obx(() => CustomTextField(
+                  controller: controller.passwordController,
+                  hintText: 'Masukkan kata sandi',
+                  obscureText: !controller.isPasswordVisible.value,
+                  prefixIcon: const Icon(
+                    Icons.lock_outline,
+                    color: Colors.grey,
+                  ),
+                  suffixIcon: IconButton(
+                    icon: Icon(
+                      controller.isPasswordVisible.value
+                          ? Icons.visibility
+                          : Icons.visibility_off,
+                      color: Colors.grey,
+                    ),
+                    onPressed: controller.togglePasswordVisibility,
+                  ),
+                  backgroundColor: AppColors.white,
+                  textColor: Colors.black87,
+                  hintColor: Colors.grey,
+                  borderColor: AppColors.white,
+                  borderWidth: 0,
+                )),
+                const SizedBox(height: 12),
+                Row(
+                  children: [
+                    Obx(() => Checkbox(
+                      value: controller.rememberMe.value,
+                      onChanged: controller.toggleRememberMe,
+                      checkColor: AppColors.white,
+                      fillColor: MaterialStateProperty.all(AppColors.primary),
+                      side: const BorderSide(
+                        color: AppColors.primary,
+                        width: 2,
+                      ),
+                    )),
+                    Text(
+                      'Ingat Saya',
+                      style: AppTextStyles.bodyMedium.copyWith(
+                        color: AppColors.white,
+                      ),
+                    ),
+                    const Spacer(),
+                    TextButton(
+                      onPressed: controller.goToForgotPassword,
+                      child: Text(
+                        'Lupa Kata Sandi?',
+                        style: AppTextStyles.bodySmall.copyWith(
+                          color: AppColors.white,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 32),
+                Obx(() => CustomButton(
+                  text: 'MASUK',
+                  onPressed: controller.isLoading.value ? null : controller.login,
+                  isLoading: controller.isLoading.value,
+                  backgroundColor: AppColors.white,
+                  textColor: AppColors.primary,
+                  borderColor: AppColors.primary,
+                  borderWidth: 2,
+                )),
+                const SizedBox(height: 24),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
